@@ -12,31 +12,37 @@
 </head>
 
 <body>
-  <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <h1 class="display-4">The To-Do List</h1>
-      <p class="lead">A simple app to keep track of your daily tasks.</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container">
+            <h1 class="display-4">The To-Do List</h1>
+            <p class="lead">A simple app to keep track of your daily tasks.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
   <div class="container">
     <div class="row">
       <div class="col-5">
-      <form>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">What do you need to do?</label>
-          <input type="text" class="form-control" id="form exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
-        <button id="button" type="submit" class="btn btn-primary">Submit</button>
-      </form>
-    </div>
-    <div class="col-5">
-      <ul id="list" class="list list-group">
-        <li id="listItem" class="list-group-item"></li>
-      </ul>
+        <form>
+          <div class="mb-3">
+            <label for="item" class="form-label">What do you need to do?</label>
+            <input type="text" class="form-control" id="item">
+          </div>
+          <button id="addItem" type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+      <div class="col-5">
+        <ul id="items" class="list list-group">
+          <!-- <li class="list-group-item"></li> -->
+        </ul>
 
+      </div>
     </div>
-  </div>
   </div>
 
 
