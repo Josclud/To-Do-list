@@ -1,18 +1,22 @@
 document.getElementById('addItem').addEventListener('click', event => {
   event.preventDefault()
-  
-  let itemElem = document.createElement('li')
-  itemElem.className = 'list-group-item'
-  itemElem.textContent = document.getElementById('item').value 
 
+  let itemElem = document.createElement('li')
+  itemElem.className = 'list-group-item d-flex justify-content-between align-items-left'
+  itemElem.innerHTML = `
+  ${document.getElementById('item').value}
+  <button class="btn btn-danger delete">X</button>
+  `
   document.getElementById('items').append(itemElem)
   document.getElementById('item').value = ''
 })
 
-// const listItem = () => {
-//   let li = document.createElement('list');
-//   list.appendChild(li)
-// }
+document.addEventListener('click', event => {
+  if (event.target.classList.contains('delete')) {
+    event.target.parentNode.remove()
+  }
+})
+
 
 // // let listItem = document.createElement('li')
 // // listItem.innerHTML = '<li class="list-group-item"></li>'
